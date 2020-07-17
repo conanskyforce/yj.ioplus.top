@@ -103,4 +103,9 @@ nav.navigation {
     color: #fff;
   }
 }
+@media screen and (max-width: 600px){
+  ul.right {
+    display: none;
+  }
+}
 </style>

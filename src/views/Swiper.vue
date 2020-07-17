@@ -77,14 +77,24 @@ export default {
 <style lang="less" scoped>
 /* eslint-disable */
 .swiper-container {
-  height: 500px;
+  height: 400px;
   background-color: #fff;
   .swiper {
     height: 100%;
   }
   .swiper-zoom-container /deep/ .swiper-img{
+    object-fit: cover;
     height: 100%;
-    max-width: none;
+  }
+}
+@media screen and (min-width: 1120px){
+  .swiper-container{
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1100px){
+  .swiper-container{
+    height: 500px;
   }
 }
 @media screen and (max-width: 880px){
