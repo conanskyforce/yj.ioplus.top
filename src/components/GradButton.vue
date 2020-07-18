@@ -6,14 +6,22 @@
       <div class="border-bottom"></div>
       <div class="border-left"></div>
     </div>
-    <span class="btn-text">Start</span>
+    <span class="btn-text">{{text}}</span>
   </button>
 </template>
-
+<script>
+export default {
+  name: 'GradButton',
+  props: {
+    text: {
+      type: String,
+      default: 'Start'
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 .btn {
-  margin-top: 20px;
-  margin-bottom: 50px;
   --hue: 190;
   --ease-in-duration: 0.25s;
   --ease-in-exponential: cubic-bezier(0.95, 0.05, 0.795, 0.035);

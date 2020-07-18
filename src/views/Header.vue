@@ -4,12 +4,8 @@
   </div>
 </template>
 <script>
-import Navigation from '../components/Navigation.vue'
 export default {
-  name: 'my-header',
-  components: {
-    Navigation
-  }
+  name: 'my-header'
 }
 </script>
 <style lang="less" scoped>
