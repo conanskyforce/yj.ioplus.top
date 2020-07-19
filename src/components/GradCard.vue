@@ -2,7 +2,7 @@
   <div class="card">
     <div class="left">
       <img
-        src="https://d3r49iyjzglexf.cloudfront.net/illustrations/switch-from-jenkins-6970e1be53e7adf682ecf62483f9c5544d8d2d53af98136f3f96375cba2ae610.png"
+        src="../assets/images/ci.png"
         alt="card"
       />
     </div>
