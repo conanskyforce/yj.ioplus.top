@@ -1,12 +1,12 @@
 <template>
-  <div class="reveal">sword art online</div>
+  <div class="reveal-word">sword art online</div>
 </template>
 <script>
 export default {
   mounted() {
     let duration = 0.8;
     let delay = 0.3;
-    let revealText = document.querySelector(".reveal");
+    let revealText = document.querySelector(".reveal-word");
     let letters = revealText.textContent.split("");
     revealText.textContent = "";
     let middle = letters.filter(e => e !== " ").length / 2;
@@ -21,8 +21,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-.reveal {
+.reveal-word {
   position: relative;
+  width: 80%;
+  margin: auto;
   margin-top: 50px;
   display: flex;
   justify-content: center;
