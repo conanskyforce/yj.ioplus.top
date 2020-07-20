@@ -4,7 +4,8 @@
     <div class="content">
       <GradLoading />
       <Quote />
-      <GradText />
+      <!-- <GradText /> -->
+      <Gutter gutter="20" />
       <GradCard />
       <Gutter gutter="20" />
       <GradButton />
