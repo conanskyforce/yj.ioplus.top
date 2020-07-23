@@ -27,4 +27,9 @@ export default {
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.content{
+  max-width: 1200px;
+  margin: auto;
+}
+</style>
