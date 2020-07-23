@@ -21,7 +21,9 @@ export default {
   overflow: hidden;
   z-index: 2;
   transition: all 0.5s;
-  &:hover{
+}
+@media screen and (min-width: 600px){
+  .header:hover{
     background: rgba(0,0,0,0.3);
   }
 }

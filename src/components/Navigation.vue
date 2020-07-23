@@ -42,7 +42,7 @@ nav.navigation {
       height: 20px;
       position: relative;
       padding: 10px;
-      color: steelblue;
+      color: #fff;
       line-height: 1;
       transition: 0.2s all linear;
       cursor: pointer;
