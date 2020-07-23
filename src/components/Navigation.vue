@@ -25,6 +25,10 @@ nav.navigation {
     padding-right: 40px;
     list-style-type: none;
     margin: auto;
+    li{
+      color: white;
+      font-size: 18px;
+    }
   }
   ul.right {
     padding-right: 120px;
@@ -36,8 +40,7 @@ nav.navigation {
       height: 20px;
       position: relative;
       padding: 10px;
-      font-size: 24px;
-      color: #000;
+      color: steelblue;
       line-height: 1;
       transition: 0.2s all linear;
       cursor: pointer;
@@ -66,8 +69,6 @@ nav.navigation {
     position: relative;
     float: left;
     padding: 10px;
-    font-size: 24px;
-    color: #000;
     line-height: 1;
     margin-right: 10px;
     transition: 0.2s all linear;
@@ -81,7 +82,7 @@ nav.navigation {
     left: 100%;
     width: 0;
     height: 100%;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #fff;
     transition: 0.2s all linear;
   }
 
@@ -90,7 +91,7 @@ nav.navigation {
     top: 0;
     left: 0;
     transition-delay: 0.1s;
-    border-bottom-color: #000;
+    border-bottom-color: #fff;
     z-index: -1;
   }
 
@@ -106,6 +107,12 @@ nav.navigation {
 @media screen and (max-width: 600px){
   ul.right {
     display: none;
+  }
+  nav.navigation ul.left {
+    padding-left: 20px;
+    li{
+      padding-left: 0px;
+    }
   }
 }
 </style>
