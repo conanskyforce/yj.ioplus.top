@@ -20,6 +20,8 @@
 
 <style lang="less" scoped>
 nav.navigation {
+  max-width: 1200px;
+  margin: auto;
   ul {
     padding-left: 40px;
     padding-right: 40px;
