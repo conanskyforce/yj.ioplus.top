@@ -13,19 +13,16 @@ export default {
 //   border: solid 1px;
 // }
 .header {
-  // font-family: fantasy;
-  // font-size: 1.5em;
-  // margin-bottom: 20px;
-  // margin-top: 20px;
-  // justify-content: center;
-  // display: flex;
+  position: fixed;
+  width: 100%;
   height: 40px;
   padding-bottom: 10px;
   padding-top: 10px;
   overflow: hidden;
-  // align-items: center;
-  // img {
-  //   height: 50px;
-  // }
+  z-index: 2;
+  transition: all 0.5s;
+  &:hover{
+    background: rgba(0,0,0,0.3);
+  }
 }
 </style>
