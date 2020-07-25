@@ -22,14 +22,18 @@
 nav.navigation {
   max-width: 1200px;
   margin: auto;
+  overflow:hidden;
   ul {
     padding-left: 40px;
     padding-right: 40px;
     list-style-type: none;
     margin: auto;
     li{
-      color: white;
+      color: rgba(17,31,51,.6);
       font-size: 18px;
+      &:hover{
+        color: #3370ff;
+      }
     }
   }
   ul.right {
@@ -42,7 +46,7 @@ nav.navigation {
       height: 20px;
       position: relative;
       padding: 10px;
-      color: #fff;
+      color: grey;
       line-height: 1;
       transition: 0.2s all linear;
       cursor: pointer;
@@ -53,10 +57,12 @@ nav.navigation {
       img:hover {
         transform: scale(1.3);
       }
+      &:active{
+        color: lightgrey;
+      }
     }
     li.logo:active {
-      background: #000;
-      color: #fff;
+      color: steelblue;
     }
     li:nth-child(even) {
       height: 40px;
@@ -102,8 +108,7 @@ nav.navigation {
   }
 
   .right li:active {
-    background: #000;
-    color: #fff;
+    color: lightgrey;
   }
 }
 @media screen and (max-width: 600px){
