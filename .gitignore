@@ -19,3 +19,5 @@ config.js
 *.njsproj
 *.sln
 *.sw?
+
+.credential
