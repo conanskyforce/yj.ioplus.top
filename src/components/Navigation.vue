@@ -8,21 +8,49 @@
         <img src="../assets/images/logo.png" alt="logo" />
       </li>
     </ul>
-    <ul class="right">
+    <ul v-if="isPC || true" class="right">
       <li>产品</li>
       <li>DEMO</li>
       <li>价格</li>
       <li>关于</li>
     </ul>
+    <div v-if="false" class="right-mobile">
+      <span class="icon-menu"></span>
+      <ul :class="{'right-ul':true, 'show-sub':showSub}">
+        <li>产品</li>
+        <li>DEMO</li>
+        <li>价格</li>
+        <li>关于</li>
+      </ul>
+    </div>
   </nav>
 </template>
+<script>
+export default {
+  name: 'navigation',
+  props: {
+    isPC: Boolean
+  },
+  data() {
+    return {
+      showSub: false
+    }
+  },
+  methods: {
+    showSubMenu () {
 
+    }
+  },
+}
+</script>
 
 <style lang="less" scoped>
 nav.navigation {
   max-width: 1200px;
   margin: auto;
   overflow:hidden;
+  display: flex;
+  justify-content: space-around;
   ul {
     padding-left: 40px;
     padding-right: 40px;
@@ -109,6 +137,9 @@ nav.navigation {
 
   .right li:active {
     color: lightgrey;
+  }
+  .right-ul {
+    display: none;
   }
 }
 @media screen and (max-width: 600px){
