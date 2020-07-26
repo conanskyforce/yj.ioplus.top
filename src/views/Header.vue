@@ -13,12 +13,14 @@ export default {
     }
   },
   created () {
-    window.onscroll = this.throttle(this.setHeader)
-    window.onresize = this.throttle(this.setPC)
+    this.setHeader()
+    this.setPC()
+    window.addEventListener('scroll',this.throttle(this.setHeader))
+    window.addEventListener('resize',this.throttle(this.setPC))
   },
   destroyed() {
-    window.onscroll = null
-    window.onresize = null
+    window.removeEventListener('scroll',this.throttle(this.setHeader))
+    window.removeEventListener('resize',this.throttle(this.setPC))
   },
   methods: {
     setHeader () {
@@ -29,7 +31,7 @@ export default {
       }
     },
     setPC () {
-      if(document.body.offsetWidth > 880) {
+      if(document.body.offsetWidth > 820) {
         this.isPC = true
       } else {
         this.isPC = false
@@ -50,7 +52,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 40px;
   padding-bottom: 10px;
@@ -65,8 +67,10 @@ export default {
   box-shadow: 0px 2px 8px lightgrey;
 }
 @media screen and (min-width: 600px){
-  // .header:hover{
-  //   background: rgba(255,255,255,0.8);
+  // .header-fixed{
+  //   position: fixed;
+  //   background: rgba(255,255,255,1);
+  //   box-shadow: 0px 2px 8px lightgrey;
   // }
 }
 </style>

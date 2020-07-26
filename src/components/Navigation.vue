@@ -8,7 +8,7 @@
         <img src="../assets/images/logo.png" alt="logo" />
       </li>
     </ul>
-    <ul v-if="isPC || true" class="right">
+    <ul v-if="isPC" class="right">
       <li>产品</li>
       <li>DEMO</li>
       <li>价格</li>
@@ -55,7 +55,7 @@ export default {
 <style lang="less" scoped>
 nav.navigation {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   overflow:hidden;
   display: flex;
   justify-content: space-around;
@@ -177,11 +177,16 @@ nav.navigation {
     }
   }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px) {
   ul.right {
     display: none;
   }
-  nav.navigation ul.left {
+  nav.navigation ul.left{
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 600px){
+  nav.navigation ul {
     padding-left: 20px;
     li{
       padding-left: 0px;
