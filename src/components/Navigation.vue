@@ -23,6 +23,14 @@
         <li>关于</li>
       </ul>
     </div>
+    <div class="login">
+      <a href="" class="login">
+        <span class="login">登录</span>
+      </a>
+      <a href="" class="register">
+        <span class="register">注册</span>
+      </a>
+    </div>
   </nav>
 </template>
 <script>
@@ -140,6 +148,33 @@ nav.navigation {
   }
   .right-ul {
     display: none;
+  }
+  div.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      text-decoration: none;
+    }
+    span.login{
+      color: #3370ff;
+      margin-right: 20px
+    }
+    span.register{
+      border-radius: 15px;
+      padding: 5px 15px;;
+      color: #fff;
+      background-color: #006aff;
+      &:active{
+        color: lightgrey;
+      }
+      margin-right: 20px;
+    }
+    span{
+      &:active{
+        color: grey;
+      }
+    }
   }
 }
 @media screen and (max-width: 600px){

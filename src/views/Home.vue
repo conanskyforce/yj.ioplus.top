@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Swiper />
+    <BigHome />
     <div class="content">
       <GradLoading />
       <Quote />
@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import Swiper from "@/views/Swiper.vue";
+import BigHome from "@/views/BigHome.vue";
 import Quote from "@/views/Quote.vue";
 
 export default {
   name: "home",
   components: {
-    Swiper,
+    BigHome,
     Quote,
   }
 };
