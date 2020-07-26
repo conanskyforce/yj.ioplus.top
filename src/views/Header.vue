@@ -49,9 +49,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-// * {
-//   border: solid 1px;
-// }
 .header {
   position: fixed;
   width: 100%;
