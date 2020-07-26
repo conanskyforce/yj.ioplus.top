@@ -1,6 +1,6 @@
 <template>
   <div :class="{header: true,'header-fixed':headerFixed}">
-    <Navigation />
+    <Navigation :isPC="isPC" />
   </div>
 </template>
 <script>
@@ -8,14 +8,17 @@ export default {
   name: 'my-header',
   data(){
     return {
-      headerFixed: false
+      headerFixed: false,
+      isPC: true
     }
   },
   created () {
     window.onscroll = this.throttle(this.setHeader)
+    window.onresize = this.throttle(this.setPC)
   },
   destroyed() {
     window.onscroll = null
+    window.onresize = null
   },
   methods: {
     setHeader () {
@@ -23,6 +26,13 @@ export default {
         this.headerFixed = true
       } else {
         this.headerFixed = false
+      }
+    },
+    setPC () {
+      if(document.body.offsetWidth > 880) {
+        this.isPC = true
+      } else {
+        this.isPC = false
       }
     },
     throttle (fn, delay = 100) {
@@ -54,7 +64,7 @@ export default {
 }
 .header-fixed{
   position: fixed;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,1);
   box-shadow: 0px 2px 8px lightgrey;
 }
 @media screen and (min-width: 600px){
